@@ -13,27 +13,16 @@
   padding-top: 15pt;
 }
 
-.page-content-guide {
-  color: rgb(61 61 61);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  padding-bottom: 25pt;
-}
-
 .page-content {
   color: rgb(61 61 61);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.7rem;
-  padding-left: 10pt;
-  padding-top: 10pt;
-  padding-bottom: 25pt;
 }
 
 .page-content-answer {
   color: rgb(61 61 61);
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.7rem;
-  padding-top: 10pt;
+  font-size: 1.5rem;
   padding-bottom: 20pt;
 }
 
