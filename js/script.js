@@ -18,11 +18,19 @@ async function weatherToday () {
     )
     const jsonData = await resultJSON.json()
     console.log(jsonData)
-    const weatherTodayNumber = jsonData.data[0]
+
+    // bring the information from API
+    const weatherDescription = jsonData.weather[0].description
+    const iconURL = jsonData.weather[0].icon
+    const tempCelsius = (jsonData.main.temp - 273.15).toFixed(1)
+    const location = jsonData.name
 
     // output
     document.getElementById('weather-today').innerHTML =
-      '<p>' + weatherTodayNumber + '</p>'
+      'Weather: ' + weatherDescription + '<br />' +
+      'Temperature: ' + tempCelsius + ' °C<br />' +
+      'Location: ' + location + '<br />' +
+      '<img src="' + iconURL + '" alt="Weather icon image">'
   } catch (error) {
     console.error(error)
   }
