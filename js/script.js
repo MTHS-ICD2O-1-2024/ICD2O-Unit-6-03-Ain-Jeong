@@ -9,7 +9,7 @@
  * This function gets the weather today
  * The 'async' is there because it will take time for the internet to return the value
  */
-async function weatherToday() {
+async function weatherToday () {
   // the 'try' is here because the internet may not be working
   // it is like an 'if ... else' statement'
   try {
