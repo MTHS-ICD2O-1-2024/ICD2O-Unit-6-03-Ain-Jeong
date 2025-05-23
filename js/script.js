@@ -26,15 +26,13 @@ async function weatherToday () {
     const weatherMain = jsonData.weather[0].main
     const weatherDescription = jsonData.weather[0].description
     const tempCelsius = (jsonData.main.temp - 273.15).toFixed(1)
-    const windSpeed = jsonData.wind.speed
 
     // output
     document.getElementById('weather-icon').src = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png'
     document.getElementById('weather-today').innerHTML =
       'Location: ' + location + ' (lat: ' + coordinate.lat + ', lon: ' + coordinate.lon + ')<br />' +
       'Weather: ' + weatherMain + '; ' + weatherDescription + '<br />' +
-      'Temperature: ' + tempCelsius + ' °C<br />' +
-      'Wind speed: ' + windSpeed + ' m/h<br />'
+      'Temperature: ' + tempCelsius + ' °C<br />'
   } catch (error) {
     console.error(error)
   }
