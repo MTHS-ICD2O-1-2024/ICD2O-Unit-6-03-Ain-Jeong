@@ -21,18 +21,16 @@ async function weatherToday () {
 
     // bring the information from API
     const iconCode = jsonData.weather[0].icon
-    const location = jsonData.name
-    const coordinate = jsonData.coord
     const weatherMain = jsonData.weather[0].main
-    const weatherDescription = jsonData.weather[0].description
-    const tempCelsius = (jsonData.main.temp - 273.15).toFixed(1)
+    const weatherDescription = jsonData.weather[0].descriptio
+    const tempKelvin = jsonData.main.temp
+    const tempCelsius = tempKelvin - 273.15
 
     // output
     document.getElementById('weather-icon').src = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png'
     document.getElementById('weather-today').innerHTML =
-      'Location: ' + location + ' (lat: ' + coordinate.lat + ', lon: ' + coordinate.lon + ')<br />' +
       'Weather: ' + weatherMain + '; ' + weatherDescription + '<br />' +
-      'Temperature: ' + tempCelsius + ' °C<br />'
+      'Temperature: ' + tempCelsius.toFixed(1) + ' °C'
   } catch (error) {
     console.error(error)
   }
