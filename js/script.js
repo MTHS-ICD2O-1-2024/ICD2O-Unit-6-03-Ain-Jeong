@@ -22,7 +22,7 @@ async function weatherToday () {
     // bring the information from API
     const iconCode = jsonData.weather[0].icon
     const weatherMain = jsonData.weather[0].main
-    const weatherDescription = jsonData.weather[0].descriptio
+    const weatherDescription = jsonData.weather[0].description
     const tempKelvin = jsonData.main.temp
     const tempCelsius = tempKelvin - 273.15
 
